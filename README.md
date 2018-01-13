@@ -1,3 +1,3 @@
 # Poker
 
-Poker for memory training
+Poker for memory training!
