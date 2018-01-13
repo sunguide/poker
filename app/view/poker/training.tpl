@@ -18,6 +18,7 @@
         let index = parseInt($(".poker_img").attr("data-index"));
         if(index === 54){
 //            index = 0;
+            return;
         }
         ++index;
         $(".poker_img").attr("src","/public/images/" + pokers[index] + ".jpg");
@@ -25,8 +26,9 @@
     }
     function prevPoker() {
         let index = parseInt($(".poker_img").attr("data-index"));
-        if(index < 0){
+        if(index === 0){
 //            index = 54;
+            return;
         }
         --index;
         $(".poker_img").attr("src","/public/images/" + pokers[index] + ".jpg");
@@ -42,25 +44,25 @@
         nextPoker();
     });
     $(document).ready(function () {
-        $activePage = $('#page-1');
-        $activePage.addClass('active');
+//        $activePage = $('#page-1');
+//        $activePage.addClass('active');
         // Create an instance of Hammer with the reference.
         //初始化手势滑动
-        var container = document.getElementById('container'),
-            mc = new Hammer.Manager(container),
-            Swipe = new Hammer.Swipe();
-        mc.add(Swipe);
-        mc.on('swipeleft', function (e) {
-            swipteTo('next', e);
-        });
-        mc.on('swiperight', function (e) {
-            swipteTo('prev', e);
-        });
-        function swipteTo(slideType, e) {
-            var $targetPage = $activePage[slideType]('.page');
-            console.log($targetPage)
-            $targetPage.length && (location.hash = '#' + $targetPage.attr('id'));
-        }
+//        var container = document.getElementById('container'),
+//            mc = new Hammer.Manager(container),
+//            Swipe = new Hammer.Swipe();
+//        mc.add(Swipe);
+//        mc.on('swipeleft', function (e) {
+//            swipteTo('next', e);
+//        });
+//        mc.on('swiperight', function (e) {
+//            swipteTo('prev', e);
+//        });
+//        function swipteTo(slideType, e) {
+//            var $targetPage = $activePage[slideType]('.page');
+//            console.log($targetPage)
+//            $targetPage.length && (location.hash = '#' + $targetPage.attr('id'));
+//        }
 
     });
 </script>

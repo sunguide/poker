@@ -69,6 +69,8 @@ $(function () {
             }
         })
     })
-    var vConsole = new VConsole();
+    if(VConsole){
+        var vConsole = new VConsole();
+    }
 });
 

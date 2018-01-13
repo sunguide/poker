@@ -20,4 +20,7 @@ module.exports = app => {
     }
     app.Controller = CustomController;
     app.cache = Cache.load('pokers');
+    app.locals = {
+        "env": app.env
+    }
 };

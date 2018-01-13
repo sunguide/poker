@@ -51,7 +51,7 @@
             <li><a href="/update">升级计划</a></li>
         </ul>
         <div class="copyright">
-            <p>Copyright © 2018 记忆助手 v1.0.1</p>
+            <p>Copyright © 2018 记忆助手{{ app.env }} v1.0.1</p>
         </div>
     </div>
 </div>
@@ -60,7 +60,10 @@
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% if env == "prod" %}
+{% else %}
 <script src="/public/js/vconsole.min.js"></script>
+{% endif %}
 <script src="/public/js/common.js"></script>
 </body>
 </html>
