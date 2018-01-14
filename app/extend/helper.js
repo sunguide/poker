@@ -91,9 +91,15 @@ module.exports = helper = {
         }
     },
     encode(str){
+        if(!str){
+            return "";
+        }
         return new Buffer(str).toString('base64');
     },
     decode(str){
+        if(!str){
+            return "";
+        }
         return new Buffer(str, 'base64').toString();
     }
 };
