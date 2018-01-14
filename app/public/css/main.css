@@ -4,7 +4,6 @@ body{
     min-width: 320px;
     max-width: 750px;
     min-height:600px;
-    font-size: .34133rem;
     margin: 0 auto;
     -webkit-font-smoothing:antialiased;
 }
@@ -139,6 +138,7 @@ sup{
     width: 300px;
     margin-bottom: 10px;
     text-align: center;
+    font-size: 15px;
 }
 .menu a{
     display: block;
@@ -198,6 +198,11 @@ sup{
     margin: 15px auto;
     max-width: 200px;
     text-decoration: none;
+    font-size: 16px;
+}
+
+.h5ui-toast_content{
+    background: hsla(0,0%,7%,.9);
 }
 /*未知部分*/
 .notice{

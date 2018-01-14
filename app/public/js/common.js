@@ -72,5 +72,29 @@ $(function () {
     if(VConsole){
         var vConsole = new VConsole();
     }
+
 });
 
+
+let UI = {
+    toast:function(options){
+        let message = options;
+        if(typeof options !== "string"){
+            message = options.message;
+        }
+        if($(".h5ui-toast").length > 0){
+            $(".h5ui-toast").find("span").html(message);
+        }else{
+            let html = `<div class="h5ui-toast">
+                <div class="h5ui-toast_backdrop"></div>
+                <div class="h5ui-toast_dialog">
+                <div class="h5ui-toast_content">
+                <span>${message}</span>
+                </div>
+                </div>
+            </div>`;
+            $("body").append(html);
+        }
+        $(".h5ui-toast").show().delay(2000).fadeOut();
+    }
+}

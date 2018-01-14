@@ -22,6 +22,7 @@
         let index = parseInt($(".poker_img").attr("data-index"));
         if(index === 54){
 //            index = 0;
+            UI.toast("最后一张")
             return;
         }else if(index === 0){
             startTimer();
@@ -34,6 +35,7 @@
         let index = parseInt($(".poker_img").attr("data-index"));
         if(index === 0){
 //            index = 54;
+            UI.toast("这就是第一张")
             return;
         }
         --index;

@@ -27,10 +27,7 @@
 
     <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />-->
     <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
-    <!-- 引入样式 -->
-    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-    <!-- 引入组件库 -->
-    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link rel="stylesheet" href="http://www.h5ui.io/css/h5ui.min.css"/>
     <link rel="stylesheet" href="/public/css/main.css"/>
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.slim.min.js"></script>
     <link rel="icon" href="/public/favicon.png" type="image/x-icon">
@@ -55,15 +52,14 @@
             <li><a href="/update">升级计划</a></li>
         </ul>
         <div class="copyright">
-            <p>Copyright © 2018 记忆助手{{ app.env }} v1.0.1</p>
+            <p>Copyright © 2018 记忆助手 {{ app.env }} v1.0.1</p>
         </div>
     </div>
 </div>
-<div class="hide" id="toast-message">{{ toast }}</div>
 <!--javascript-->
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="http://www.h5ui.io/js/h5ui.min.js"></script>
 {% if env == "prod" %}
 {% else %}
 <script src="/public/js/vconsole.min.js"></script>
