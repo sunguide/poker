@@ -18,7 +18,7 @@
     "grunt-contrib-jshint": "^1.1.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --env=prod",
+    "start": "egg-scripts start --daemon --env=prod --port=8001",
     "stop": "egg-scripts stop",
     "dev": "egg-bin dev && open http://localhost:7001/",
     "prod": "egg-bin prod && open http://localhost:7001/",
