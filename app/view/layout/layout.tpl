@@ -27,6 +27,10 @@
 
     <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />-->
     <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <link rel="stylesheet" href="/public/css/main.css"/>
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.slim.min.js"></script>
     <link rel="icon" href="/public/favicon.png" type="image/x-icon">

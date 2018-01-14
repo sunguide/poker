@@ -15,7 +15,6 @@ module.exports = app => {
         async history(){
             let cache = Cache.load('pokers');
             let pokers = await cache.all();
-            console.log(pokers);
             return pokers;
         }
 

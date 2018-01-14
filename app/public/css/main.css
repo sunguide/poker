@@ -134,6 +134,12 @@ sup{
     border-color: #f56c6c;
 }
 
+.timer{
+    margin: auto;
+    width: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+}
 .menu a{
     display: block;
     margin: 15px auto;
@@ -313,7 +319,7 @@ sup{
 
 .container{
     min-height: 200px;
-    margin-top:50px;
+    margin-top:20px;
 }
 .bs-sidebar{
     border-width:0;
@@ -348,7 +354,7 @@ ul.nav li{
 }
 
 .main-container{
-    margin-top: 64px;
+    margin-top: 20px;
 }
 
 .awesome-category-list .box{
