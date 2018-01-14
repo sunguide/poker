@@ -5,6 +5,7 @@ body{
     max-width: 750px;
     min-height:600px;
     margin: 0 auto;
+    font-size: 16px;
     -webkit-font-smoothing:antialiased;
 }
 .pc {
