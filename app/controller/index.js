@@ -16,8 +16,9 @@ module.exports = app => {
                 let username = $.trim(ctx.request.body.username);
                 let password = $.trim(ctx.request.body.password);
                 if(ctx.service.user.login(username,password)){
-                    ctx.cookies.set('username',username);
+                    ctx.cookies.set('username',ctx.helper.encode(username));
                     ctx.cookies.set('uid',ctx.helper.md5("user_"+username));
+                    ctx.redirect("/");
                 }
                 // return;
             }

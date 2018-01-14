@@ -39,7 +39,7 @@
         <div class="title">
             <h1>扑克记忆训练</h1>
             <span>一个高效的扑克记忆训练工具。</span>
-            <span>{{ ctx.cookies.get("username") }}</span>
+            <span style="float:right;">{{ helper.decode(ctx.cookies.get("username")) }}</span>
         </div>
     </div>
 
