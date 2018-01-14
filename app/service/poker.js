@@ -7,19 +7,16 @@ module.exports = app => {
         constructor(ctx) {
             super(ctx);
         }
-
-        async random(ctx) {
-
-        }
-
-        async history(){
-            let cache = Cache.load('pokers');
+        async history(userId){
+            let db = userId || "pokers";
+            let cache = Cache.load(db);
             let pokers = await cache.all();
             return pokers;
         }
 
-        getPoker(id){
-            let cache = Cache.load('pokers');
+        getPoker(id,userId){
+            let db = userId || "pokers";
+            let cache = Cache.load(db);
             if(id){
                 if(cache.getKey(id)){
                     let data = cache.getKey(id);
@@ -52,9 +49,10 @@ module.exports = app => {
                 created:now
             };
         }
-        removePoker(id){
+        removePoker(id,userId){
+            let db = userId || "pokers";
             if(id){
-                let cache = Cache.load('pokers');
+                let cache = Cache.load(db);
                 return cache.removeKey(id);
             }
             return false;

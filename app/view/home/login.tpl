@@ -1,41 +1,29 @@
 {% extends "../layout/layout.tpl" %}
 
 {% block content %}
-<section class="login-container">
+<section class="container main-container">
 
-    <div class="form-behavior divider">
-        <span>登录</span>
+    <div class="form-behavior" style="text-align: center;margin: 20px;">
+        <span>注册即登录</span>
     </div>
 
     <div class="inner">
         <form class="user-login-form" id="user-login" action="/login" accept-charset="UTF-8" method="post">
             <input name="utf8" type="hidden" value="✓">
-            <div class="form-group">
-                <input class="form-control" autofocus="autofocus" placeholder="邮箱/手机号" type="text"
-                       name="username" id="username"
-                       ng-model="formData.username">
-                <span class="float-label"><i class="icon-username"></i></span>
-            </div>
 
-            <div class="form-group">
-                <input class="form-control" autocomplete="on" placeholder="密码" type="password"
-                       name="password" id="password"
-                       ng-model="formData.password">
-                <span class="float-label"><i class="icon-lock"></i></span>
-            </div>
+            <!-- start [input] -->
+            <div class="h5ui-group">
+                <div class="h5ui-form">
+                    <label for="username" class="h5ui-form-label">用户名</label>
+                    <input type="text" id="username" name="username" class="h5ui-form-input" placeholder="输入用户名">
+                </div>
 
-            <div class="form-group checkbox-group hidden">
-                <input name="remember_me" type="hidden" value="0">
-                <input type="checkbox" value="1"
-                       checked="checked"
-                       name="user[remember_me]"
-                       id="user_remember_me">
-                <label for="user_remember_me">记住密码</label>
+                <div class="h5ui-form">
+                    <label for="password" class="h5ui-form-label">密码</label>
+                    <input type="password" id="password" name="password" class="h5ui-form-input" placeholder="设置登录密码">
+                </div>
             </div>
-
-            <div class="form-group action">
-                <button class="btn btn-block btn-primary ajax-post reload" type="submit" target-form="user-login-form">登录</button>
-            </div>
+            <input class="button primary" style="display: block;width: 200px;margin: auto;" type="submit" value="登录">
         </form>
         <div class="help-section">
 
